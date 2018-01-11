@@ -1,2 +1,122 @@
-﻿body {
+﻿/* DOM elements */
+html {
+    text-shadow: .8px .8px 1.5px rgba(0, 0, 0, 1);
+}
+body {
+    background-image: url('../images/assets/backgrounds/stars.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Elements by class */
+.planetCase {
+    position: absolute;
+    background-image: url('../images/assets/surfaces/rock.png');
+    background-size: 500px 500px;
+    top: 38%;
+    border-radius: 50%;
+    animation: spin 50s linear infinite;
+    transform: rotate(14deg);
+    opacity: 1;
+}
+
+    .planetCase:after {
+        content: "";
+        position: absolute;
+        z-index: 12;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+       
+    }
+.waterLevel {
+    background-image: url('../images/assets/waters/water1.png');
+    background-size: 500px 500px;
+    top: 38%;
+    border-radius: 50%;
+    animation: spin 50s linear infinite;
+    opacity: .71;
+}
+
+    .waterLevel:after {
+        content: "";
+        position: absolute;
+        z-index: 12;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+
+.atmosphere {
+    position:absolute;
+    background-image: url('../images/assets/clouds/cloud.png');
+    background-size: 500px 1000px;
+    width: 286px;
+    height: 286px;
+    border-radius: 50%;
+    opacity: .1;
+    animation: spin2 25s linear infinite;
+    transform: rotate(-15deg);
+    opacity: .21;
+}
+
+.bTable {
+    position: fixed;
+    color: #fff;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0 0 1px silver;
+    padding: 12px;
+    background: rgb(44, 43, 55);
+    border-radius:2px;
+    border:3px inset rgba(161, 161, 162, 0.36);
+}
+
+.eles {
+    background: rgba(61, 61, 62, 0.46);
+    text-align: left;
+    padding: 5px 12px;
+}
+
+.eBoxes {
+    background: rgba(139, 139, 139, 0.94);
+    position: relative;
+    float: right;
+    width: 30px;
+    margin-left: 5px;
+    display: inline-block;
+    box-shadow: 0 0 1px silver;
+    color:#000;
+    padding-right:5px;
+    text-align:right;
+}
+
+
+/* Elements by id */
+#planetNameCase {
+    position:fixed;
+    font-size:100%;
+    right:5px;
+    width:13%;
+    text-align:center;
+}
+/* Misc */
+/* Keyframes */
+@keyframes spin {
+    to {
+        background-position: -500px 0;
+
+    }
+}
+
+@keyframes spin2 {
+
+    to {
+        background-position: 1000px 0;
+    }
 }
