@@ -96,14 +96,81 @@ body {
     text-align:right;
 }
 
+.dialogBox {
+    position:absolute;
+    bottom:5px;
+    left:5px;
+    background: silver;
+    width: 99%;
+    line-height:26px;
+    padding:10px 0;
+    border-radius: 2px;
+    border: 3px inset rgba(161, 161, 162, 0.76);
+    text-indent:5px;
+}
+.specialsTable {
+    position:fixed;
 
+    right:5px;
+    width:100px;
+    height:auto;
+    bottom:65px;
+}
+.specialBtns {
+    display: inline-block;
+    margin: 2px 0;
+    width: 100px;
+    background:rgba(161, 161, 162, 1);
+    border:3px outset silver;
+}
+    .specialBtns:hover {
+        background: rgba(161, 161, 162, 1);
+    }
+    .specialBtns:active {
+        border: 3px inset silver;
+    }
+.specialBtns_busy {
+    display: inline-block;
+    margin: 2px 0;
+    width: 100px;
+    background: rgba(61, 61, 62, 1);
+    border: 3px inset silver;
+    animation: flash 500ms ease-in-out infinite;
+}
+.specialBtns_locked {
+    display: inline-block;
+    margin: 2px 0;
+    width: 100px;
+    background: rgba(61, 61, 62, 1);
+    border: 3px inset silver;
+}
+.meteor {
+    position:fixed;
+    right:-10px;
+    top:100px;
+    background:grey;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+}
+.meteor_fly {
+    transition: all 2700ms ease-in;
+    transition-delay: 200ms;
+    position: fixed;
+    right: 50%;
+    top: 50%;
+    background: yellow;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+}
 /* Elements by id */
 #planetNameCase {
-    position:fixed;
-    font-size:100%;
-    right:5px;
-    width:13%;
-    text-align:center;
+    position: fixed;
+    font-size: 100%;
+    right: 3px;
+    width: 13%;
+    text-align: center;
 }
 /* Misc */
 /* Keyframes */
@@ -118,5 +185,13 @@ body {
 
     to {
         background-position: 1000px 0;
+    }
+}
+@keyframes flash {
+    from {
+        color:initial;
+    }
+    to {
+        color:transparent;
     }
 }
