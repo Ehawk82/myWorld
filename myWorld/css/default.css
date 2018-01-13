@@ -154,7 +154,7 @@ body {
     border-radius:50%;
 }
 .meteor_fly {
-    transition: all 2700ms ease-in;
+    transition: all 2830ms ease-in;
     transition-delay: 200ms;
     position: fixed;
     right: 50%;

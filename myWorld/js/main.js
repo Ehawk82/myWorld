@@ -63,7 +63,7 @@
     // game globals
     var UI, uData, uLevel;
 
-    uLevel = 3;
+    uLevel = 1;
 
     uData = {
         planetType: "",
@@ -260,7 +260,7 @@
             UI.savePlanetStats(uuu, bTable);
         },
         savePlanetStats: (uuu, bTable) => {
-            var pT;
+            var pT, eBoxes = UI.bySelAll(".eBoxes");
 
             if (uuu.mass <= 5) {
                 pT = "Small Asteroid";
@@ -289,6 +289,7 @@
             }
 
             uData.planetType = pT;
+            uData.mass = eBoxes[1].innerHTML;
 
             localStorage.setItem("uData", JSON.stringify(uData));
 
@@ -360,7 +361,8 @@
                 bTable = UI.bySel(".bTable"),
                 planetCase = UI.bySel(".planetCase"),
                 waterLevel = UI.bySel(".waterLevel"),
-                atmosphere = UI.bySel(".atmosphere");
+                atmosphere = UI.bySel(".atmosphere"),
+                eBoxes = UI.bySelAll(".eBoxes");
 
             if (uD) {
                 var uuu = JSON.parse(uD);
@@ -385,10 +387,8 @@
                             specialBtns.onmouseout = UI.outHoverEffect(dialogBox);
                             specialBtns.onclick = UI.powerClickEffect(dialogBox, specialBtns, j);
 
-                            uData.mass = +uData.mass + +1;
-                            localStorage.setItem("uData", JSON.stringify(uData));
+                            eBoxes[1].innerHTML = +eBoxes[1].innerHTML + +1;
 
-                           
                             UI.renderPlanetStatus(bTable, planetCase, waterLevel, atmosphere);
                             UI.renderTableUpdate(bTable, planetCase, waterLevel, atmosphere);
                             UI.savePlanetStats(uuu, bTable);
