@@ -58,9 +58,23 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="images\assets\backgrounds\stars.jpg" />
+    <Content Include="images\assets\asteroids\asteroid4.png" />
+    <Content Include="images\assets\asteroids\asteroid3.png" />
+    <Content Include="images\assets\asteroids\asteroid2.png" />
+    <Content Include="images\assets\asteroids\asteroid1.png" />
+    <Content Include="images\assets\backgrounds\Space001.png" />
+    <Content Include="images\assets\backgrounds\Space002.png" />
+    <Content Include="images\assets\backgrounds\Space003.png" />
+    <Content Include="images\assets\backgrounds\Space004.png" />
+    <Content Include="images\assets\backgrounds\Space005.png" />
     <Content Include="images\assets\clouds\cloud.png" />
+    <Content Include="images\assets\gifs\explosion.gif" />
+    <Content Include="images\assets\gifs\lava.gif" />
+    <Content Include="images\assets\gifs\lava1.gif" />
+    <Content Include="images\assets\surfaces\lava.gif" />
+    <Content Include="images\assets\surfaces\civ.png" />
     <Content Include="images\assets\surfaces\rock.png" />
+    <Content Include="images\assets\surfaces\plants.png" />
     <Content Include="images\assets\waters\water1.png" />
     <Content Include="index.html" />
     <Content Include="images\LockScreenLogo.scale-200.png" />
